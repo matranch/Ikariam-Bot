@@ -1,9 +1,9 @@
-const Discord = require("discord.js");
+const Discord = require("discord.js")
 const client = new Discord.Client()
 
 client.on('ready', () => {
   //console.log(`Logged in as ${client.user.tag}!`);
-});
+})
 listAB = [
 64,68,115,263,382,626,982,1330,2004,2665,3916,5156,7446,9753,12751,18163,23691,33451,43572,56729,73833,103459,144203,175058,243930,317208,439968,536310,743789,1027470,1257246,1736683
 ]
@@ -13,7 +13,6 @@ listAC = [
 client.on('message', function(msg) {
   let tab = []
   let k=l=m=0
-  bool = bool1 = bool2 = true
   const args = msg.content.trim().split(/ +/g)
   const command = args.shift().toLowerCase()
   if (command === "!academie") {
@@ -22,16 +21,13 @@ client.on('message', function(msg) {
     j = parseInt(j)
     if(i !== i)
       i = 0
-    if(j !== j && i > 0){
+    if(j !== j && i > 0)
       j = i
-      bool = true
-    }
     if(i > 0)
       i--
     while(i < j && i < 32){
       l += listAB[i]
       m += listAC[i]
-      showTab()
       tab[k++] = 'lvl:'+(i+1)+' b: '+number(listAB[i])+' c: '+number(listAC[i++])+' cumulé: b: '+number(l)+' c: '+number(m)
     }
     if(tab.length == 0)
