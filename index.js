@@ -30,8 +30,8 @@ client.on('message', function(msg) {
       m += listAC[i]
       tab[k++] = 'lvl:'+(i+1)+' b: '+number(listAB[i])+' c: '+number(listAC[i++])+' cumulé: b: '+number(l)+' c: '+number(m)
     }
-    if(tab.length == 0)
-      tab = 'argument: [1-32][1-32]'
+    if(tab.length == 0){
+      tab = 'argument: [1-32][1-32] test'}
     msg.channel.send(tab)
   }
   if (command == '!alice')
